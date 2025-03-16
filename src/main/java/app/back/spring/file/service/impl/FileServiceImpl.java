@@ -1,12 +1,12 @@
 package app.back.spring.file.service.impl;
 
 import app.back.spring.file.service.FileService;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.core.io.Resource;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
