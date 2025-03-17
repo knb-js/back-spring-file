@@ -11,10 +11,12 @@ import java.util.List;
 @RequestMapping("/api/files")
 public interface FileController {
 
+    @CrossOrigin(origins = "*")
     @PostMapping("/upload")
     ResponseEntity<List<String>> uploadFile(@RequestParam("file") MultipartFile file,
                                             @RequestParam("segmentSize") int segmentSize) throws IOException;
 
+    @CrossOrigin(origins = "*")
     @GetMapping("/download/{fileName}")
     ResponseEntity<Resource> downloadFile(@PathVariable String fileName) throws IOException;
 
